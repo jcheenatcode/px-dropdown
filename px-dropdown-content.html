@@ -641,7 +641,8 @@ limitations under the License.
             length = items.length,
             i;
         for(i=0; i<length; i++) {
-          this.toggleClass('hidden', items[i].val.toString().toLowerCase().indexOf(term) === -1 && items[i].key.toString().toLowerCase().indexOf(term) === -1, items[i]);
+          // for now only check for values and not keys
+          this.toggleClass('hidden', items[i].val.toString().toLowerCase().indexOf(term) === -1, items[i]);
         }
       }
     },
